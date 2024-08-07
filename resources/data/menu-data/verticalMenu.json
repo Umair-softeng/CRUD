@@ -1,0 +1,26 @@
+{
+  "menu": [
+        {
+          "navheader": "Cruds",
+          "slug": ""
+        },
+        {
+          "url": "/category",
+          "name": "Category",
+          "icon": "shopping-cart",
+          "slug": "category.index"
+        },
+        {
+          "url": "/product",
+          "name": "Product",
+          "icon": "shopping-cart",
+          "slug": "product.index"
+        },
+        {
+          "url": "/order",
+          "name": "Order",
+          "icon": "shopping-cart",
+          "slug": "order.index"
+        }
+    ]
+}
