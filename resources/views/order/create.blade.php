@@ -26,6 +26,17 @@
                         @endif
                     </div>
                 </div>
+                <div class="mb-2 form-group row {{ $errors->has('quantity') ? 'has-error' : '' }}">
+                    <label for="quantity" class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 col-form-label" style="font-size: 14px">Quantity:</label>
+                    <div class="col-12 col-sm-6 col-md-8 col-lg-10 col-xl-10 col-xxl-10">
+                        <input type="number" name="quantity" class="form-control @if($errors->has('quantity')) is-invalid @endif" value="{{ old('quantity') }}" placeholder="Enter Quantity">
+                        @if($errors->has('quantity'))
+                            <em class="invalid-feedback">
+                                {{ $errors->first('quantity') }}
+                            </em>
+                        @endif
+                    </div>
+                </div>
                 <div class="mb-2 form-group row {{ $errors->has('date') ? 'has-error' : '' }}">
                     <label for="date" class="col-12 col-sm-6 col-md-4 col-lg-2 col-xl-2 col-xxl-2 col-form-label" style="font-size: 14px">Date:</label>
                     <div class="col-12 col-sm-6 col-md-8 col-lg-10 col-xl-10 col-xxl-10">

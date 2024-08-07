@@ -59,6 +59,9 @@
                                         <tr role="row">
                                             <th class="sorting sorting_desc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 46px;" aria-label="Order No: activate to sort column ascending" aria-sort="descending">ID</th>
                                             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 70px;" aria-label="Product Name: activate to sort column ascending">Product Name</th>
+                                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 70px;" aria-label="Product Price: activate to sort column ascending">Product Price</th>
+                                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 70px;" aria-label="Category Name: activate to sort column ascending">Category Name</th>
+                                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 70px;" aria-label="Quantity: activate to sort column ascending">Quantity</th>
                                             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 70px;" aria-label="Date: activate to sort column ascending">Date</th>
                                             <th class="cell-fit sorting_disabled" rowspan="1" colspan="1" style="width: 80px;"
                                                 aria-label="Actions">Actions
@@ -120,6 +123,9 @@
                         // columns according to JSON
                         { data: 'orderID' },
                         { data: 'productID'},
+                        { data: 'productPrice'},
+                        { data: 'categoryName'},
+                        { data: 'quantity'},
                         { data: 'date'},
                         { data: 'actions' }
                     ],

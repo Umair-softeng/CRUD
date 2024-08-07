@@ -15,7 +15,8 @@ class CreateOrderTable extends Migration
     {
         Schema::create('order', function (Blueprint $table) {
             $table->id('orderID');
-            $table->string('date');
+            $table->date('date');
+            $table->integer('quantity');
             $table->foreignId('productID')->constrained('product', 'productID');
             $table->timestamps();
         });

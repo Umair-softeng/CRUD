@@ -19,7 +19,7 @@ class OrderController extends Controller
         public function index(Request $request)
     {
         if ($request->ajax()) {
-            $query = Order::with('product')->get();
+            $query = Order::with('product.category')->get();
             $table = Datatables::of($query);
 
             $table->addColumn('actions', '&nbsp;');
@@ -38,6 +38,14 @@ class OrderController extends Controller
 
             $table->editColumn('productID', function ($row) {
                 return $row->product->name;
+            });
+
+            $table->editColumn('productPrice', function ($row) {
+                return $row->product->price;
+            });
+
+            $table->editColumn('categoryName', function ($row) {
+                return $row->product->category->name;
             });
 
             $table->rawColumns(['actions']);
@@ -87,7 +95,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        $order->load('product');
+        $order->load('product.category');
         $breadcrumbs = [
             ['link' => "/order", 'name' => "Order"], ['name' => 'List']
         ];

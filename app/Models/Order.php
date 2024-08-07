@@ -10,7 +10,7 @@ class Order extends Model
     use HasFactory;
     protected $table = 'order';
     protected $primaryKey = 'orderID';
-    protected $fillable = ['productID', 'date'];
+    protected $fillable = ['productID', 'date', 'quantity'];
 
     public function product(){
         return $this->belongsTo('App\Models\Product', 'productID', 'productID');

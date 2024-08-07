@@ -18,6 +18,24 @@
             </p>
         </div>
         <div class="card-body">
+            <h5 class="mb-75">Product Category Name :-</h5>
+            <p class="card-text badge badge-glow bg-primary">
+                {{$order->product->category->name}}
+            </p>
+        </div>
+        <div class="card-body">
+            <h5 class="mb-75">Product Price :-</h5>
+            <p class="card-text badge badge-glow bg-primary">
+                {{$order->product->price}}
+            </p>
+        </div>
+        <div class="card-body">
+            <h5 class="mb-75">Quantity :-</h5>
+            <p class="card-text badge badge-glow bg-primary">
+                {{$order->quantity}}
+            </p>
+        </div>
+        <div class="card-body">
             <h5 class="mb-75">Order Date :-</h5>
             <p class="card-text badge badge-glow bg-primary">
                 {{$order->date}}

@@ -26,6 +26,7 @@ class StoreOrderRequest extends FormRequest
         return [
             'productID' => 'required',
             'date' => 'required',
+            'quantity' => 'required',
         ];
     }
 

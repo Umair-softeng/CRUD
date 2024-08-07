@@ -23,5 +23,11 @@
                 {{$product->category->name}}
             </p>
         </div>
+        <div class="card-body">
+            <h5 class="mb-75">Product Price :-</h5>
+            <p class="card-text badge badge-glow bg-primary">
+                {{$product->price}}
+            </p>
+        </div>
     </div>
 @endsection
