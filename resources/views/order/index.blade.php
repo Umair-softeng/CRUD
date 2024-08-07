@@ -137,7 +137,7 @@
                             render: function (data, type, full, meta) {
                                 var orderID = full['orderID'];
                                 // Creates full output for row
-                                var $rowOutput = '<a class="fw-bold" href="order/show/' + orderID + '"> #' + orderID + '</a>';
+                                var $rowOutput = '<a class="fw-bold" href="order/show/' + orderID + '"> ' + orderID + '</a>';
                                 return $rowOutput;
                             }
                         },

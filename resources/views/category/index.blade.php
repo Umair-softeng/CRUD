@@ -53,7 +53,7 @@
                                            id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
                                         <thead>
                                         <tr role="row">
-                                            <th class="sorting sorting_desc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 46px;" aria-label="Category No: activate to sort column ascending" aria-sort="descending">ID</th>
+                                            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 46px;" aria-label="Category No: activate to sort column ascending">ID</th>
                                             <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" style="width: 70px;" aria-label="Category Name: activate to sort column ascending">Category Name</th>
                                             <th class="cell-fit sorting_disabled" rowspan="1" colspan="1" style="width: 80px;"
                                                 aria-label="Actions">Actions
@@ -74,7 +74,6 @@
     </div>
 @endsection
 @section('page-script')
-    <script src="https://cdn.ckeditor.com/ckeditor5/35.1.0/super-build/ckeditor.js"></script>
     <script>
         var msg = "{{ Session::get('message') }}";
         var exist = "{{ Session::has('message') }}";
@@ -125,7 +124,7 @@
                             render: function (data, type, full, meta) {
                                 var $categoryID = full['categoryID'];
                                 // Creates full output for row
-                                var $rowOutput = '<a class="fw-bold" href="category/show/' + $categoryID + '"> #' + $categoryID + '</a>';
+                                var $rowOutput = '<a class="fw-bold" href="category/show/' + $categoryID + '"> ' + $categoryID + '</a>';
                                 return $rowOutput;
                             }
                         },
